@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | TheGreatTech</title>
+    <meta name="description" content="Read our latest blog post about technology and web development">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/greattech_logo.svg">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <style>
+        /* ======================
+   Blog Single Page Styles
+   ====================== */
+
+.blog-single {
+    padding: 5rem 0;
+}
+
+.blog-post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.blog-post-meta span {
+    display: flex;
+    align-items: center;
+}
+
+.blog-post-meta i {
+    margin-right: 0.5rem;
+}
+
+.blog-post-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+}
+
+.blog-post-image {
+    margin: 2rem 0;
+}
+
+.blog-post-image img {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-body {
+    line-height: 1.8;
+}
+
+.blog-post-body h2,
+.blog-post-body h3,
+.blog-post-body h4 {
+    margin: 2rem 0 1rem;
+    color: var(--dark);
+}
+
+.blog-post-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-tags {
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--gray-light);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.tag-link {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.3rem 0.8rem;
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--secondary);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.tag-link:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.social-share {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.comments-section {
+    padding: 2rem 0;
+    border-top: 1px solid var(--gray-light);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.comment {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.comment-author strong {
+    margin-right: 1rem;
+}
+
+.comment-author .text-muted {
+    font-size: 0.9rem;
+}
+
+.related-post-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.related-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.related-post-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.related-post-card h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* Dark Mode */
+.dark-mode .blog-post-title,
+.dark-mode .blog-post-body h2,
+.dark-mode .blog-post-body h3,
+.dark-mode .blog-post-body h4 {
+    color: var(--white);
+}
+
+.dark-mode .blog-post-body {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-mode .related-post-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .blog-single {
+        padding: 3rem 0;
+    }
+    
+    .blog-post-title {
+        font-size: 2rem;
+    }
+    
+    .blog-post-meta {
+        gap: 1rem;
+    }
+    
+    .social-share {
+        flex-direction: column;
+    }
+    
+    .social-share .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .blog-post-title {
+        font-size: 1.8rem;
+    }
+    
+    .blog-post-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <img src="assets/images/greattech_logo.svg" alt="TheGreatTech Logo">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/greattech_logo_white.svg" alt="TheGreatTech Logo" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">Services<i
+                                class="fas fa-chevron-down small ms-1 "></i></a>
+
+                        <div class="dropdown-menu ">
+                            <a class="dropdown-item" href="services.html#web">Web Development</a>
+                            <a class="dropdown-item" href="services.html#mobile">Mobile Apps</a>
+                            <a class="dropdown-item" href="services.html#cloud">Cloud Solutions</a>
+                            <a class="dropdown-item" href="services.html#ai">AI Integration</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link " href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link btn btn-primary" href="contact.html#quote">Get Quote</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <section class="section blog-single">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <article id="blog-post-content">
+                        <!-- Content loaded via JavaScript -->
+                    </article>
+                    
+                    <!-- Share Buttons -->
+                    <!-- <div class="share-buttons mt-5" data-aos="fade-up">
+                        <h4>Share this post:</h4>
+                        <div class="social-share">
+                            <a href="#" class="btn btn-outline-primary share-facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="#" class="btn btn-outline-primary share-twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href="#" class="btn btn-outline-primary share-linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                            <a href="#" class="btn btn-outline-primary share-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        </div>
+                    </div> -->
+                    
+                    <!-- Comments Section -->
+                    <!-- <div class="comments-section mt-5" data-aos="fade-up">
+                        <h4 id="comments-count">Comments</h4>
+                        <div id="comments-container">
+                           Comments would be loaded here 
+                        </div>
+                        <form id="comment-form" class="mt-4">
+                            <div class="form-group">
+                                <label for="comment-name">Name</label>
+                                <input type="text" class="form-control" id="comment-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment-email">Email</label>
+                                <input type="email" class="form-control" id="comment-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment-text">Your Comment</label>
+                                <textarea class="form-control" id="comment-text" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3">Post Comment</button>
+                        </form>
+                    </div> -->
+                    
+                    <!-- Related Posts -->
+                    <div class="related-posts mt-5" data-aos="fade-up">
+                        <h4>Related Posts</h4>
+                        <div class="row" id="related-posts-container">
+                            <!-- Related posts loaded via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 footer-about">
+                    <img src="assets/images/greattech_logo_white.svg" alt="TheGreatTech Logo" height="40">
+                    <p>Providing affordable, high-quality digital solutions since 2023. Helping businesses establish and
+                        grow their online presence.</p>
+                    <div class="social-links">
+                        <!-- <a href="https://wa.me/917889528326"><i class="fab fa-facebook-f"></i></a> -->
+                        <a href="https://wa.me/917889528326"><i class="fab fa-whatsapp"></i></a>
+                        <!-- <a href="https://wa.me/917889528326"><i class="fab fa-linkedin-in"></i></a> -->
+                        <!-- <a href="https://wa.me/917889528326"><i class="fab fa-instagram"></i></a> -->
+                        <a href="https://github.com/TheGreatTech"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#mobile">Mobile Applications</a></li>
+                        <li><a href="services.html#cloud">Cloud Solutions</a></li>
+                        <li><a href="services.html#ai">AI Integration</a></li>
+                        <li><a href="services.html#support">Support & Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> BEERWAH BUDGAM J&K</li>
+                        <li><i class="fas fa-phone"></i> +91 7889528326</li>
+                        <li><i class="fas fa-envelope"></i> thegreattechofficial@gmail.com</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline-light">Contact Form</a>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2023 TheGreatTech. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="privacy.html">Privacy Policy</a> |
+                        <a href="terms.html">Terms of Service</a> |
+                        <a href="cookies.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-handler.js"></script>
+    <script src="assets/js/blog-loader.js"></script>
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Load services data
+        $(document).ready(function() {
+            $.getJSON('data/services.json', function(data) {
+                let servicesHtml = '';
+                data.slice(0, 3).forEach(service => {
+                    servicesHtml += `
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="${service.id * 100}">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="${service.icon}"></i>
+                                </div>
+                                <h3>${service.title}</h3>
+                                <p>${service.description}</p>
+                                <a href="services.html#${service.id}" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    `;
+                });
+                $('#services-container').html(servicesHtml);
+            });
+
+            // Load testimonials
+            $.getJSON('data/testimonials.json', function(data) {
+                let testimonialsHtml = '';
+                data.forEach(testimonial => {
+                    testimonialsHtml += `
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="${testimonial.id * 100}">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <p>"${testimonial.content}"</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <img src="${testimonial.avatar}" alt="${testimonial.name}">
+                                    <div>
+                                        <h4>${testimonial.name}</h4>
+                                        <span>${testimonial.position}, ${testimonial.company}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                $('#testimonials-container').html(testimonialsHtml);
+            });
+
+            // Load blog preview
+            $.getJSON('data/blog-posts.json', function(data) {
+                let blogHtml = '';
+                data.slice(0, 3).forEach(post => {
+                    blogHtml += `
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="${post.id * 100}">
+                            <div class="blog-card">
+                                <div class="blog-image">
+                                    <img src="${post.image}" alt="${post.title}" class="img-fluid">
+                                    <div class="blog-date">${post.date}</div>
+                                </div>
+                                <div class="blog-content">
+                                    <h3><a href="blog-single.html?id=${post.id}">${post.title}</a></h3>
+                                    <p>${post.excerpt}</p>
+                                    <a href="blog-single.html?id=${post.id}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                $('#blog-preview-container').html(blogHtml);
+            });
+        });
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Blog Single Script -->
+    <script>
+        $(document).ready(function() {
+            // Initialize AOS animation
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Get blog post ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('id');
+            
+            if (postId) {
+                // Load the specific blog post
+                $.getJSON('data/blog-posts.json', function(data) {
+                    const post = data.find(p => p.id == postId);
+                    
+                    if (post) {
+                        // Update page title
+                        document.title = `${post.title} | TheGreatTech Blog`;
+                        
+                        // Update meta description
+                        $('meta[name="description"]').attr('content', post.excerpt);
+                        
+                        // Build post content HTML
+                        const postHtml = `
+                            <div class="blog-post-meta mb-4">
+                                <span><i class="far fa-calendar-alt"></i> ${post.date}</span>
+                                <span><i class="far fa-user"></i> By ${post.author}</span>
+                                <span><i class="far fa-folder"></i> ${post.category}</span>
+                                <span><i class="far fa-comments"></i> ${post.comments} Comments</span>
+                            </div>
+                            <h1 class="blog-post-title mb-4">${post.title}</h1>
+                            <div class="blog-post-image mb-4">
+                                <img src="${post.image}" alt="${post.title}" class="img-fluid rounded">
+                            </div>
+                            <div class="blog-post-body">
+                                ${post.content}
+                            </div>
+                            <div class="blog-post-tags mt-5">
+                                <strong>Tags:</strong>
+                                ${post.tags.map(tag => `<a href="blog.html?tag=${tag.toLowerCase()}" class="tag-link">${tag}</a>`).join('')}
+                            </div>
+                        `;
+                        
+                        $('#blog-post-content').html(postHtml);
+                        
+                        // Update comments count
+                        $('#comments-count').text(`Comments (${post.comments})`);
+                        
+                        // Set up share buttons
+                        const postUrl = encodeURIComponent(window.location.href);
+                        const postTitle = encodeURIComponent(post.title);
+                        
+                        $('.share-facebook').attr('href', `https://www.facebook.com/sharer/sharer.php?u=${postUrl}`);
+                        $('.share-twitter').attr('href', `https://twitter.com/intent/tweet?text=${postTitle}&url=${postUrl}`);
+                        $('.share-linkedin').attr('href', `https://www.linkedin.com/shareArticle?mini=true&url=${postUrl}&title=${postTitle}`);
+                        $('.share-whatsapp').attr('href', `https://wa.me/?text=${postTitle} ${postUrl}`);
+                        
+                        // Load related posts (same category)
+                        const relatedPosts = data.filter(p => p.category === post.category && p.id != post.id).slice(0, 3);
+                        if (relatedPosts.length > 0) {
+                            let relatedHtml = '';
+                            relatedPosts.forEach(related => {
+                                relatedHtml += `
+                                    <div class="col-md-4 mb-4">
+                                        <div class="related-post-card">
+                                            <a href="blog-single.html?id=${related.id}">
+                                                <img src="${related.image}" alt="${related.title}" class="img-fluid">
+                                                <h5>${related.title}</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                `;
+                            });
+                            $('#related-posts-container').html(relatedHtml);
+                        } else {
+                            $('.related-posts').hide();
+                        }
+                    } else {
+                        $('#blog-post-content').html('<div class="alert alert-danger">Post not found. <a href="blog.html">Return to blog</a></div>');
+                    }
+                }).fail(function() {
+                    $('#blog-post-content').html('<div class="alert alert-danger">Error loading post. <a href="blog.html">Return to blog</a></div>');
+                });
+            } else {
+                $('#blog-post-content').html('<div class="alert alert-danger">No post specified. <a href="blog.html">Return to blog</a></div>');
+            }
+            
+            // Handle comment form submission
+            $('#comment-form').submit(function(e) {
+                e.preventDefault();
+                
+                const form = $(this);
+                const submitBtn = form.find('button[type="submit"]');
+                const originalBtnText = submitBtn.html();
+                
+                submitBtn.prop('disabled', true);
+                submitBtn.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Posting...');
+                
+                // Simulate comment submission
+                setTimeout(() => {
+                    const name = $('#comment-name').val();
+                    const comment = $('#comment-text').val();
+                    
+                    // In a real app, you would send this to your server
+                    const commentHtml = `
+                        <div class="comment mb-4">
+                            <div class="comment-author">
+                                <strong>${name}</strong>
+                                <span class="text-muted">Just now</span>
+                            </div>
+                            <div class="comment-text">
+                                ${comment}
+                            </div>
+                        </div>
+                    `;
+                    
+                    $('#comments-container').prepend(commentHtml);
+                    form.trigger('reset');
+                    submitBtn.prop('disabled', false);
+                    submitBtn.html(originalBtnText);
+                    
+                    // Update comments count
+                    const commentsCount = $('#comments-count').text().match(/\d+/);
+                    const newCount = commentsCount ? parseInt(commentsCount[0]) + 1 : 1;
+                    $('#comments-count').text(`Comments (${newCount})`);
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>

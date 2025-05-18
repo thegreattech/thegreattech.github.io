@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "10 Web Design Trends for 2023",
+        "excerpt": "Discover the top web design trends that will dominate in 2023...",
+        "content": "<p>2023 is bringing exciting new trends to web design that focus on user experience and visual appeal.</p><h3>1. Dark Mode Everywhere</h3><p>Dark mode has moved from being a nice-to-have to an essential feature...</p><img src='assets/images/photo.png' alt='Design Trends' class='img-fluid mb-4'><h3>2. Micro-Interactions</h3><p>Small animations that respond to user actions create a more engaging experience...</p>",
+        "image": "assets/images/photo.png",
+        "date": "May 15, 2023",
+        "author": "Jane Smith",
+        "category": "Web Design",
+        "tags": ["Design", "Trends", "UI/UX"],
+        "comments": 12
+    },
+    {
+        "id": 2,
+        "title": "How to Choose the Right Tech Stack",
+        "excerpt": "A comprehensive guide to selecting the perfect technology stack...",
+        "content": "<p>Choosing the right technology stack is crucial for your project's success...</p><h3>Frontend Considerations</h3><p>For frontend development, consider React for its component-based architecture...</p><img src='assets/images/photo.png' alt='Tech Stack' class='img-fluid mb-4'><h3>Backend Options</h3><p>Node.js offers great performance for I/O heavy applications...</p> ",
+        "image": "assets/images/photo.png",
+        "date": "April 28, 2023",
+        "author": "John Doe",
+        "category": "Development",
+        "tags": ["Technology", "Programming", "Backend"],
+        "comments": 8
+    },
+
+
+
+
+    {
+        "id": 3,
+        "title": "The Future of AI in Web Development",
+        "excerpt": "Exploring how artificial intelligence is transforming the way we build and interact with websites.",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio iste beatae nostrum maxime dolores veniam saepe eligendi dolor magni quos repellat sunt tempora in, necessitatibus laudantium, quas ipsum. Dignissimos, temporibus sit dolorem aliquid maiores exercitationem, accusantium ipsum natus ratione voluptate facere nihil eum recusandae a incidunt! Corrupti, tempora sint. Praesentium, dolorem ad maiores cumque veniam asperiores, pariatur ipsa corporis eius molestiae deserunt autem minus debitis itaque voluptates dolor aliquam tenetur ipsum impedit! Nihil quis perferendis illum qui eveniet laborum in necessitatibus facilis est perspiciatis itaque eligendi ex cumque rem minus, quisquam impedit aperiam quas! Omnis ex, facere ipsum fugiat minima perspiciatis esse praesentium nulla delectus et vero expedita odit enim quaerat suscipit aliquam! Maxime consectetur, illum rerum saepe quam numquam perferendis eaque. Veritatis ex dolorem fugiat ullam praesentium laborum placeat ipsa alias eligendi dolor, minus soluta ipsum ratione, sunt deserunt iure doloremque optio vero a magni expedita. Aperiam culpa, reprehenderit rerum non quae sed, ad eum at consequatur suscipit tenetur deserunt qui pariatur exercitationem modi commodi! Nisi itaque, delectus quidem porro, non architecto accusantium praesentium nemo totam eveniet deserunt? Alias aliquam ab asperiores aliquid quidem explicabo nostrum, quis nihil, enim obcaecati sapiente eum ullam laboriosam tenetur blanditiis veritatis? Dolorum, officiis?",
+        "image": "assets/images/photo.png",
+        "date": "April 10, 2023",
+        "author": "Sarah Johnson",
+        "category": "Artificial Intelligence" ,
+        "tags": ["AI", "Machine Learning", "Innovation"],
+        "comments": 15
+    }
+]

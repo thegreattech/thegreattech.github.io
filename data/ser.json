@@ -1,0 +1,247 @@
+{
+  "serviceCategories": [
+    {
+      "id": "web",
+      "name": "Web Development",
+      "icon": "fas fa-globe",
+      "active": true
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile Apps",
+      "icon": "fas fa-mobile-alt",
+      "active": false
+    },
+  
+    {
+      "id": "social",
+      "name": "social",
+      "icon": "fas fa-chart-line",
+      "active": false
+    },
+    {
+      "id": "design",
+      "name": "design",
+      "icon": "fas fa-paint-brush",
+      "active": false
+    },
+    {
+      "id": "campaigns",
+      "name": "campaigns",
+      "icon": "fas fa-bullseye",
+      "active": false
+    }
+  ],
+  "quoteWidget": {
+    "title": "Get a Free Quote",
+    "description": "Interested in our services? Get a free, no-obligation quote for your project.",
+    "link": "contact.html#quote",
+    "buttonText": "Request Quote"
+  },
+  
+    "services": [
+      {
+        "id": "web",
+        "icon": "fas fa-globe",
+        "title": "Web Development",
+        "description": "We create stunning, high-performance websites that are optimized for search engines and user experience.",
+        "features": {
+          "left": [
+            "Responsive Design",
+            "SEO Optimized"
+          ],
+          "right": [
+            "CMS Integration",
+            "E-Commerce Solutions"
+          ]
+        },
+        "technologies": [
+      "HTML5/CSS3",
+      "JavaScript",
+      "React",
+      "Angular",
+      "Vue.js",
+      "Node.js",
+      "PHP",
+      "Python",
+      "Django",
+      "WordPress"
+    ],
+        "pricing": [
+          
+      {
+        "name": "Basic Website",
+        "price": "9,999",
+        "features": [
+          "Up to 3 pages",
+          "Responsive Design",
+          "Domain",
+          "Basic SEO",
+          "Contact Form"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Business Website",
+        "price": "15,999",
+        "features": [
+          "Up to 6 pages",
+          "Custom Design",
+          "Domain",
+          "Advanced SEO",
+          "Email feature"
+          
+        ],
+        "popular": true
+      },
+      {
+        "name": "E-Commerce",
+        "price": "30,000+",
+        "features": [
+          "Product Catalog",
+          "Payment Gateway",
+          "User Accounts",
+          "Inventory Management",
+          "Custom Features"
+        ],
+        "popular": false
+      }
+        ]
+      },
+      {
+        "id": "mobile",
+        "icon": "fas fa-mobile-alt",
+        "title": "Mobile Applications",
+        "description": "Native and cross-platform mobile apps for iOS and Android.",
+        "features": {
+          "left": [
+            "iOS & Android Development",
+            "React Native Apps"
+          ],
+          "right": [
+            "Flutter Development",
+            "App Store Optimization"
+          ]
+        },
+        "technologies": [
+          "Flutter",
+          "Firebase",
+          "Java",
+          "Database"
+         
+        ],
+        "pricing": [
+          {
+            "name": "Intermediate Design",
+            "price": "15,999",
+            "features": [
+              "Up to 5-6 pages",
+              "Responsive Design",
+              "Database",
+              "Andoird ",
+              "Login"
+            ],
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "social",
+        "icon": "fas fa-share-alt",
+        "title": "Manage Social Media",
+        "description": "Complete social media management to grow your online presence.",
+        "features": {
+          "left": [
+            "Content Creation",
+            "Posting & Scheduling"
+          ],
+          "right": [
+            "Analytics & Reports",
+            "Engagement Management"
+          ]
+        },
+        "technologies": ["Manage All Social Media Accounts"],
+        "pricing": [
+          {
+            "name": "Manage 3 Accountss",
+            "price": "15,999 / Month",
+            "features": [
+              "Facebook",
+              "Instagram",
+              "X",
+              "3 Poste Per Week "
+             
+            ],
+            "popular": true
+          }
+        ]
+      },
+      {
+        "id": "design",
+        "icon": "fas fa-paint-brush",
+        "title": "Graphic Designing",
+        "description": "Creative designs for branding, marketing, and social media.",
+        "features": {
+          "left": [
+            "Logo & Branding",
+            "Social Media Graphics"
+          ],
+          "right": [
+            "Marketing Materials",
+            "Custom Illustrations"
+          ]
+        },
+        "technologies": ["Thumnails","Posters","Banners","Short Video",
+              "Video",
+              "Photo Editing ","etc"],
+        "pricing": [
+          {
+            "name": "All Designs",
+            "price": "Starts from 200 ",
+            "features": [
+              "Thumnails",
+              "Short Video",
+              "Video",
+              "Photo Editing "
+             
+            ],
+            "popular": true
+          }
+         
+         
+        ]
+      },
+      {
+        "id": "campaigns",
+        "icon": "fas fa-bullhorn",
+        "title": "Campaign Management",
+        "description": "Strategic campaign planning and execution for maximum impact.",
+        "features": {
+          "left": [
+            "Digital Ad Campaigns",
+            "Email Marketing"
+          ],
+          "right": [
+            "Influencer Collaboration",
+            "Performance Analytics"
+          ]
+        },
+        "technologies": ["Meta Compaigs"],
+        "pricing": [
+          {
+            "name": "Meta compaigns",
+            "price": "Starts from 3,599 ",
+            "features": [
+              "15 days",
+              "10 days",
+              "1 Month"
+             
+            ],
+            "popular": true
+          }
+        ]
+      }
+    ]
+  }
+  
+

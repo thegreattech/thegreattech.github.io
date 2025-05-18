@@ -1,0 +1,44 @@
+[
+    {
+        "id": "fe-dev-2023",
+        "title": "Frontend Developer",
+        "location": "Remote",
+        "type": "Project Based",
+        "level": "Mid-level",
+        "description": "We're looking for a skilled Frontend Developer to join our team and help build beautiful, responsive web applications for our clients.",
+        "skills": ["HTML5/CSS3", "JavaScript", "BOOSTRAP", "Responsive Design"],
+        "responsibilities": [
+            "Develop new user-facing features",
+            "Build reusable components and front-end libraries",
+            "Optimize applications for maximum speed and scalability",
+            "Collaborate with designers and backend developers",
+            "Participate in code reviews"
+        ],
+        "requirements": [
+            "frontend development experience",
+            "Experience with responsive design",
+            "Strong problem-solving skills"
+        ]
+    },
+    {
+        "id": "BACK-END DEVELOER",
+        "title": "DEVELOPER",
+        "location": "Reomte",
+        "type": "Full-time Project Based",
+        "level": "Senior",
+        "description": "Join our design team to create intuitive and engaging user experiences for our diverse client base.",
+        "skills": ["HTML5/CSS3", "AJAX", "PHP", "BOOSTRAP"],
+        "responsibilities": [
+            "Design intuitive user interfaces",
+            "Collaborate with developers on implementation",
+            "Maintain and evolve design systems"
+        ],
+        "requirements": [
+  
+            "Strong portfolio demonstrating design skills",
+            "Experience with user research methods",
+            "Understanding of frontend development principles"
+        ]
+    }
+    
+]

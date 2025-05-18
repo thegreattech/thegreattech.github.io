@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Same head as index.html -->
+    <title>Our Services | TheGreatTech</title>
+    <meta name="description"
+        content="Comprehensive web development, mobile apps, and cloud solutions at affordable prices.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/greattech_logo.svg">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <img src="assets/images/greattech_logo.svg" alt="TheGreatTech Logo">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+     <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/greattech_logo_white.svg" alt="TheGreatTech Logo" height="30">
+                <!-- <span>TheGreatTech</span> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">Services<i
+                                class="fas fa-chevron-down small ms-1 "></i></a>
+
+                        <div class="dropdown-menu ">
+                            <a class="dropdown-item" href="services.html#web">Web Development</a>
+                            <a class="dropdown-item" href="services.html#mobile">Mobile Apps</a>
+                            <a class="dropdown-item" href="services.html#cloud">Cloud Solutions</a>
+                            <a class="dropdown-item" href="services.html#ai">AI Integration</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary" href="careers.html">We're Hiring!</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Services Hero -->
+    <header class="page-hero services-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1>Our Comprehensive Services</h1>
+                    <p class="lead">We offer end-to-end digital solutions tailored to your business needs and budget.
+                    </p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="assets/images/about-extra-1.svg" alt="Coding animation" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Details -->
+    <section class="section services-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="services-sidebar" data-aos="fade-right">
+                        <div class="sidebar-widget">
+                            <h3>Service Categories</h3>
+                            <ul class="service-categories" id="serviceCategories"></ul>
+                        </div>
+                        <div class="sidebar-widget">
+                            <h3>Get a Free Quote</h3>
+                            <p>Interested in our services? Get a free, no-obligation quote for your project.</p>
+                            <a href="contact.html#quote" class="btn btn-primary btn-block">Request Quote</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8" id="servicesContent">
+                    <!-- Service details will be injected here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        fetch('data/ser.json')
+            .then(response => response.json())
+            .then(data => {
+                // Render Categories in the sidebar
+                const categoryContainer = document.getElementById('serviceCategories');
+                data.serviceCategories.forEach(cat => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<a href="#${cat.id}" class="${cat.active ? 'active' : ''}"><i class="${cat.icon}"></i> ${cat.name}</a>`;
+                    categoryContainer.appendChild(listItem);
+                });
+
+                // Render Services Content
+                const servicesContent = document.getElementById('servicesContent');
+                data.services.forEach(service => {
+                    const serviceItem = document.createElement('div');
+                    serviceItem.classList.add('service-item');
+                    serviceItem.id = service.id;
+                    serviceItem.innerHTML = `
+        <div class="service-header">
+          <div class="service-icon">
+            <i class="${service.icon}"></i>
+          </div>
+          <h2>${service.title}</h2>
+        </div>
+        <p>${service.description}</p>
+
+        <div class="service-features">
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                ${service.features.left.map(f => `<li><i class="fas fa-check"></i> ${f}</li>`).join('')}
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                ${service.features.right.map(f => `<li><i class="fas fa-check"></i> ${f}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-tech">
+          <h4>Technologies We Use:</h4>
+          <div class="tech-tags">
+            ${service.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+          </div>
+        </div>
+
+        <div class="service-pricing">
+          <h4>Pricing:</h4>
+          <div class="pricing-cards">
+            ${service.pricing.map(p => `
+              <div class="pricing-card ${p.popular ? 'featured' : ''}">
+                ${p.popular ? '<div class="popular-badge">Most Popular</div>' : ''}
+                <h5>${p.name}</h5>
+                <div class="price">${p.price}</div>
+                <ul>
+                  ${p.features.map(f => `<li>${f}</li>`).join('')}
+                </ul>
+                <a href="contact.html#quote" class="btn btn-sm ${p.popular ? 'btn-primary' : 'btn-outline-primary'}">Get Started</a>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+                    servicesContent.appendChild(serviceItem);
+                });
+            })
+            .catch(error => {
+                console.error("Error loading JSON:", error);
+            });
+
+    </script>
+    <!-- Process Section -->
+    <section class="section process ">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Development Process</h2>
+                <p>Transparent, efficient, and client-focused approach</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We analyze your requirements and business goals to create a tailored solution.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <h3>Planning</h3>
+                    <p>We create a detailed project plan with milestones and deliverables.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <h3>Design</h3>
+                    <p>Our designers create mockups and prototypes for your approval.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">4</div>
+                    <h3>Development</h3>
+                    <p>Our team builds your solution with regular updates and feedback.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+                    <div class="step-number">5</div>
+                    <h3>Testing</h3>
+                    <p>Rigorous quality assurance to ensure flawless performance.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="600">
+                    <div class="step-number">6</div>
+                    <h3>Launch</h3>
+                    <p>Deployment and post-launch support to ensure success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h2>Ready to Discuss Your Project?</h2>
+                    <p class="mb-0">Contact us today for a free consultation and quote.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                    <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 footer-about">
+                    <img src="assets/images/greattech_logo_white.svg" alt="TheGreatTech Logo" height="40">
+                    <p>Providing affordable, high-quality digital solutions since 2023. Helping businesses establish and
+                        grow their online presence.</p>
+                    <div class="social-links">
+                        <!-- <a href="https://wa.me/917889528326"><i class="fab fa-facebook-f"></i></a> -->
+                        <a href="https://wa.me/917889528326"><i class="fab fa-whatsapp"></i></a>
+                        <!-- <a href="https://wa.me/917889528326"><i class="fab fa-linkedin-in"></i></a> -->
+                        <!-- <a href="https://wa.me/917889528326"><i class="fab fa-instagram"></i></a> -->
+                        <a href="https://github.com/TheGreatTech"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#web">Web Development</a></li>
+                        <li><a href="services.html#mobile">Mobile Applications</a></li>
+                        <li><a href="services.html#cloud">Cloud Solutions</a></li>
+                        <li><a href="services.html#ai">AI Integration</a></li>
+                        <li><a href="services.html#support">Support & Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> BEERWAH BUDGAM J&K</li>
+                        <li><i class="fas fa-phone"></i> +91 7889528326</li>
+                        <li><i class="fas fa-envelope"></i> thegreattechofficial@gmail.com</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline-light">Contact Form</a>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2023 TheGreatTech. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="privacy.html">Privacy Policy</a> |
+                        <a href="terms.html">Terms of Service</a> |
+                        <a href="cookies.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-handler.js"></script>
+    <script src="assets/js/blog-loader.js"></script>
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Load services data
+        $(document).ready(function () {
+            $.getJSON('data/services.json', function (data) {
+                let servicesHtml = '';
+                data.slice(0, 3).forEach(service => {
+                    servicesHtml += `
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="${service.id * 100}">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="${service.icon}"></i>
+                                </div>
+                                <h3>${service.title}</h3>
+                                <p>${service.description}</p>
+                                <a href="services.html#${service.id}" class="read-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    `;
+                });
+                $('#services-container').html(servicesHtml);
+            });
+
+            // Load testimonials
+            $.getJSON('data/testimonials.json', function (data) {
+                let testimonialsHtml = '';
+                data.forEach(testimonial => {
+                    testimonialsHtml += `
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="${testimonial.id * 100}">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <p>"${testimonial.content}"</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <img src="${testimonial.avatar}" alt="${testimonial.name}">
+                                    <div>
+                                        <h4>${testimonial.name}</h4>
+                                        <span>${testimonial.position}, ${testimonial.company}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                $('#testimonials-container').html(testimonialsHtml);
+            });
+
+            // Load blog preview
+            $.getJSON('data/blog-posts.json', function (data) {
+                let blogHtml = '';
+                data.slice(0, 3).forEach(post => {
+                    blogHtml += `
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="${post.id * 100}">
+                            <div class="blog-card">
+                                <div class="blog-image">
+                                    <img src="${post.image}" alt="${post.title}" class="img-fluid">
+                                    <div class="blog-date">${post.date}</div>
+                                </div>
+                                <div class="blog-content">
+                                    <h3><a href="blog-single.html?id=${post.id}">${post.title}</a></h3>
+                                    <p>${post.excerpt}</p>
+                                    <a href="blog-single.html?id=${post.id}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                $('#blog-preview-container').html(blogHtml);
+            });
+        });
+    </script>
+</body>
+
+</html>

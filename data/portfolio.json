@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "title": "Travel Website",
+        "client": "Applause Kashmir",
+        "category": "web",
+        "categoryName": "Web Development",
+        "date": "March 2023",
+        "thumbnail": "assets/images/photo.png",
+        "image": "https://camo.githubusercontent.com/5039566f80e44d154a7080d4a54d8c354917f06602d899c74f115ace7b993e89/68747470733a2f2f6170706c617573656b6173686d69722e696e2f4150504c415553455f4b4153484d4952202831292e706e67",
+        "url": "https://www.applausekashmir.in",
+        "shortDescription": "A fully customized travel website with booking integration and destination management.",
+        "description": "<p>We developed a complete travel booking solution for Applause Kashmir, a premium travel service provider. The platform features:</p><ul><li>Custom tour packages with dynamic pricing</li><li>Online booking system with secure payment integration</li><li>Destination and itinerary management tools</li><li>User-friendly inquiry and contact system</li><li>Responsive design optimized for all devices</li></ul>",
+        "technologies": [
+            "Html",
+            "js",
+            "ajaz",
+            "bootrap",
+            "etc"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Mobile ecommerce App",
+        "client": "Kashur kaar",
+        "category": "mobile ecommerce",
+        "categoryName": "Mobile Application / E-Commerce",
+        "date": "January 2023",
+        "thumbnail": "assets/images/photo.png",
+        "image": "assets/images/photo.png",
+        "url": "#",
+        "shortDescription": "Mobile app for ordering authentic Kashmiri products like Pashmina, handicrafts, and more.",
+        "description": "<p>This mobile app was designed to bring the beauty of Kashmiri craftsmanship to users' fingertips. Ideal for Android and iOS, it allows customers to browse and order traditional products with ease. Key features include:</p><ul><li>Curated catalog of Pashmina, handmade crafts, and regional specialties</li><li>Product filtering by category, price, and material</li><li>Secure checkout with multiple payment options</li><li>Order tracking and delivery status updates</li><li>Push notifications for new arrivals and offers</li></ul>",
+        "technologies": [
+            "Flutter",
+            "Dart",
+            "Firebase",
+            "Plaid API"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "GestHouse Webiste",
+        "client": "Pursukoon Villa",
+        "category": "web",
+        "categoryName": "Web Development",
+        "date": "January 2022",
+        "thumbnail": "assets/images/photo.png",
+        "image": "https://camo.githubusercontent.com/a63881467cdfaf52b59caed2e0f128f2bdd737dc3e8b0d3ad7223f2753deca59/68747470733a2f2f7777772e7468656772656174746563682e746563682f696d672f636c69656e74732f70757273756b6f6f6e76696c6c612e706e67",
+        "url": "https://pursukoonvilla.in",
+        "shortDescription": "A tailored travel website for Applause Kashmir with booking features and curated tour packages.",
+        "description": "<p>The Applause Kashmir website offers travelers a seamless way to explore and book experiences across Kashmir. Key features include:</p><ul><li>Detailed tour packages with pricing and itinerary</li><li>Integrated online booking and secure payments</li><li>Photo galleries showcasing destinations</li><li>Contact and inquiry forms for personalized assistance</li><li>Fully responsive design for mobile and desktop</li></ul>",
+        "technologies": [
+            "Html",
+            "js",
+            "ajaz",
+            "bootrap",
+            "etc"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Travel Website",
+        "client": "Stressout Tours",
+        "category": "web",
+        "categoryName": "Web Development ",
+        "date": "January 2023",
+        "thumbnail": "assets/images/photo.png",
+        "image": "https://camo.githubusercontent.com/c68ce8d97f1c2ac2415a2dff54ed79fc3cd45656698ea80543c3325c29941ee9/68747470733a2f2f7777772e7468656772656174746563682e746563682f696d672f636c69656e74732f7374726573734f75742e6a7067",
+        "url": "https://pursukoonvilla.in",
+        "shortDescription": "Elegant guest house website with online booking and gallery for Pursukoon Villa.",
+        "description": "<p>The Pursukoon Villa website offers a tranquil digital experience reflecting the serene charm of the guest house. Key features include:</p><ul><li>Room listings with descriptions, amenities, and pricing</li><li>Online booking system with calendar availability</li><li>High-resolution image gallery of the property</li><li>Contact form for inquiries and reservations</li><li>Responsive design for mobile and desktop users</li></ul>",
+        "technologies": [
+            "Html",
+            "js",
+            "ajaz",
+            "bootrap",
+            "etc"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Institute Website",
+        "client": "Woman and Child walfare Society",
+        "category": "web",
+        "categoryName": "Web Development",
+        "date": "January 2022",
+        "thumbnail": "assets/images/photo.png",
+        "image": "https://camo.githubusercontent.com/3e1e9ca25942673e016086ebedfe1d3256b6e5104ca93145529925a34d6085d0/68747470733a2f2f7777772e7468656772656174746563682e746563682f696d672f636c69656e74732f776377736f63696574792e706e67",
+        "url": "https://wcwsociety.org",
+        "shortDescription": "Informative and engaging NGO website for WCW Society with donation and volunteer features.",
+        "description": "<p>The WCW Society website was designed to support the organization's mission of social welfare and community development. Key features include:</p><ul><li>Overview of ongoing projects and initiatives</li><li>Online donation system with secure payment integration</li><li>Volunteer registration and contact forms</li><li>Blog section for news and updates</li><li>Responsive design compatible with all devices</li></ul>",
+        "technologies": [
+            "Html",
+            "js",
+            "ajaz",
+            "bootrap",
+            "etc"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Social Content Plateform",
+        "client": "TechHive",
+        "category": "web ecommerce",
+        "categoryName": "Web Development",
+        "date": "January 2025",
+        "thumbnail": "assets/images/photo.png",
+        "image": "assets/images/photo.png",
+        "url": "https://thetechhive.free.nf",
+        "shortDescription": "A student-focused platform for sharing MCQs, study materials, and building academic communities.",
+        "description": "<p>The Tech Hive is an educational and social platform created to support students through collaborative learning and resource sharing. Key features include:</p><ul><li>Regularly updated MCQ materials across various subjects</li><li>Study notes, PDFs, and downloadable content</li><li>Student discussion forums and community support</li><li>Join and follow features to stay updated with new content</li><li>Mobile-friendly and easy-to-navigate interface</li></ul>",
+        "technologies": [
+            "PHP",
+            "js",
+            "ajaz",
+            "bootrap",
+            "etc"
+        ]
+    }
+]

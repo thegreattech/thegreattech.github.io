@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "SARWAR GULBADIN",
+        "position": "Owner",
+       "company": "<a href='https://applausekashmir.in' target='_blank'>Applause Kashmir</a>",
+        "content": "TheGreatTech transformed our online presence with a stunning website that exceeded our expectations. Their team was professional, responsive, and delivered on time.",
+        "avatar": "assets/clinnts photo/sarwar.png"
+    },
+    {
+        "id": 2,
+        "name": "Dr. Sajad Hussain Rather",
+        "position": "Owner",
+        "company": "<a href='https://pursukoonvilla.in' target='_blank'>Pursukoon Villa</a>",
+        "content": "We've worked with several developers before, but none matched TheGreatTech's combination of technical expertise and creative design. Highly recommended!",
+        "avatar": "https://www.accessecon.com/Store/Images/Sajad_Rather_Image.jpg"
+    },
+    {
+        "id": 3,
+        "name": "GO Wander Travels",
+        "position": "Travel Agency",
+        "company": "<a href='https://www.facebook.com/gowandertourandtravels750/' target='_blank'>GO Wander Travels </a>",
+        "content": "TheGratech started our customer acquisition campaign and delivered outstanding results. We gained new customers quickly and efficiently, all within a surprisingly low budget.",
+        "avatar": "assets/clinnts photo/gowander.png"
+    }
+]

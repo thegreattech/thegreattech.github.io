@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Newsletter Signup</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 500px; margin: 20px auto; padding: 20px; }
+        #message { padding: 15px; margin: 15px 0; border-radius: 4px; display: none; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        #loading { display: none; margin-left: 10px; }
+        #captcha-container { margin: 15px 0; display: none; }
+        input[type="email"] { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 8px 0; 
+            box-sizing: border-box; 
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button { 
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 12px 20px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-size: 16px;
+        }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest updates delivered to your inbox</p>
+    
+    <form id="newsletter-form">
+        <input type="email" id="email" placeholder="your@email.com" required>
+        
+        <!-- Hidden CAPTCHA until needed -->
+        <div id="captcha-container">
+            <div class="g-recaptcha" data-sitekey="6LfQBhYrAAAAAOXAVWuZZ0BX5DUcPlEoqLBsidQD"></div>
+        </div>
+        
+        <button type="submit">Subscribe</button>
+        <span id="loading">Sending...</span>
+    </form>
+    <div id="message"></div>
+
+    <script>
+        document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const messageDiv = document.getElementById('message');
+            const loading = document.getElementById('loading');
+            const captchaContainer = document.getElementById('captcha-container');
+            
+            // First validate email format
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showMessage('Please enter a valid email address', false);
+                return;
+            }
+            
+            // Show CAPTCHA if not already shown
+            if (captchaContainer.style.display === 'none' || !captchaContainer.style.display) {
+                captchaContainer.style.display = 'block';
+                showMessage('Please complete the CAPTCHA verification', false);
+                return;
+            }
+
+            // Verify CAPTCHA
+            const captchaResponse = grecaptcha.getResponse();
+            if (!captchaResponse) {
+                showMessage('Please complete the CAPTCHA verification', false);
+                return;
+            }
+
+            // Show loading
+            loading.style.display = 'inline';
+            messageDiv.style.display = 'none';
+
+            try {
+                const response = await fetch('https://script.google.com/macros/s/AKfycbxVabLqODXwr9YqDr0RgaBx7jIXJs_oZgRelFMSmOcBLsg8rBCIeySGu6obHS6VoYq8nw/exec', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `email=${encodeURIComponent(email)}&g-recaptcha-response=${encodeURIComponent(captchaResponse)}`
+                });
+
+                const result = await response.json();
+                showMessage(result.message, result.success);
+                if (result.success) {
+                    e.target.reset();
+                    grecaptcha.reset();
+                    captchaContainer.style.display = 'none';
+                }
+            } catch (error) {
+                showMessage('Failed to submit. Please try again.', false);
+            } finally {
+                loading.style.display = 'none';
+            }
+        });
+
+        function showMessage(text, isSuccess) {
+            const msg = document.getElementById('message');
+            msg.textContent = text;
+            msg.className = isSuccess ? 'success' : 'error';
+            msg.style.display = 'block';
+            
+            // Scroll to message
+            msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+function doPost(e) {
+    try {
+      // Parse form data
+      const params = e.postData.contents.split('&').reduce((acc, item) => {
+        const [key, value] = item.split('=');
+        acc[key] = decodeURIComponent(value);
+        return acc;
+      }, {});
+      
+      const email = params.email;
+      const captchaResponse = params['g-recaptcha-response'];
+  
+      // Validate email
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        throw new Error('Please enter a valid email address');
+      }
+  
+      // Verify reCAPTCHA using POST
+      const secretKey = '6LfQBhYrAAAAAHXkOr6XC4SngD3lh3V1WRmtbd65';
+      const verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
+      
+      const captchaResult = UrlFetchApp.fetch(verifyUrl, {
+        method: 'post',
+        payload: {
+          secret: secretKey,
+          response: captchaResponse
+        }
+      });
+      
+      const result = JSON.parse(captchaResult.getContentText());
+      if (!result.success) {
+        throw new Error('CAPTCHA verification failed');
+      }
+  
+      // Get the sheet
+      let sheet = tryGetSheet('Subscribers');
+      if (!sheet) {
+        const spreadsheetId = '1Plav8zYHaX4Hm_CTbgauEAGa2-7XdzOcRr-ps6mIIzo';
+        sheet = SpreadsheetApp.openById(spreadsheetId).getSheetByName('Sheet1');
+      }
+      
+      if (!sheet) throw new Error('Could not find subscribers sheet');
+  
+      // Check for duplicates
+      const emails = sheet.getRange(1, 1, sheet.getLastRow(), 1).getValues().flat();
+      if (emails.includes(email)) {
+        throw new Error('This email is already subscribed');
+      }
+  
+      // Save data
+      sheet.appendRow([email, new Date()]);
+      
+      // Send confirmation with professional formatting
+      sendConfirmationEmail(email);
+      
+      return ContentService.createTextOutput(
+        JSON.stringify({ success: true, message: 'Thank you for subscribing!' })
+      ).setMimeType(ContentService.MimeType.JSON);
+      
+    } catch (error) {
+      return ContentService.createTextOutput(
+        JSON.stringify({ success: false, message: error.message })
+      ).setMimeType(ContentService.MimeType.JSON);
+    }
+  }
+  
+  function tryGetSheet(sheetName) {
+    try {
+      // First try active spreadsheet
+      const activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+      if (activeSpreadsheet) {
+        const sheet = activeSpreadsheet.getSheetByName(sheetName);
+        if (sheet) return sheet;
+      }
+      
+      // Fallback to specific spreadsheet ID
+      const spreadsheetId = '1Plav8zYHaX4Hm_CTbgauEAGa2-7XdzOcRr-ps6mIIzo';
+      const spreadsheet = SpreadsheetApp.openById(spreadsheetId);
+      return spreadsheet.getSheetByName(sheetName);
+      
+    } catch (e) {
+      console.error('Error accessing sheet:', e);
+      return null;
+    }
+  }
+  
+  function sendConfirmationEmail(email) {
+    const subject = 'Your Newsletter Subscription is Confirmed';
+    
+    // HTML email with proper formatting to avoid spam
+    const htmlBody = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #2c3e50;">Thank You for Subscribing!</h2>
+        <p>You've successfully subscribed to our newsletter. Here's what to expect:</p>
+        <ul>
+          <li>Weekly updates with the latest news</li>
+          <li>Exclusive content for subscribers</li>
+          <li>Special offers and promotions</li>
+        </ul>
+        
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+          <p style="font-size: 0.9em; color: #7f8c8d;">
+            <strong>Our mailing address is:</strong><br>
+            Company Name<br>
+            123 Business Street<br>
+            City, State 10001<br><br>
+            
+            &copy; ${new Date().getFullYear()} Company Name. All rights reserved.<br>
+            <a href="%mailing_list_unsubscribe_url%" style="color: #3498db;">Unsubscribe</a> | 
+            <a href="https://yourwebsite.com/privacy" style="color: #3498db;">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+    `;
+    
+    const textBody = `Thank you for subscribing to our newsletter!\n\n` +
+      `You'll receive our weekly updates with the latest news, exclusive content, and special offers.\n\n` +
+      `Our mailing address is:\nCompany Name\n123 Business Street\nCity, State 10001\n\n` +
+      `© ${new Date().getFullYear()} Company Name. All rights reserved.\n` +
+      `Unsubscribe: %mailing_list_unsubscribe_url%`;
+    
+    MailApp.sendEmail({
+      to: email,
+      subject: subject,
+      htmlBody: htmlBody,
+      body: textBody,
+      name: "thegreattech",  // Sender name
+      replyTo: "noreply@thegreattech.tech"  // Specific noreply address
+    });
+  }

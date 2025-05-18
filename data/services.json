@@ -1,0 +1,77 @@
+[
+    {
+        "id": "web",
+        "title": "Web Development",
+        "icon": "fas fa-globe",
+        "description": "Custom websites and web applications tailored to your business needs.",
+        "features": [
+            "Responsive Design",
+            "SEO Optimized",
+            "CMS Integration",
+            "E-Commerce Solutions"
+        ]
+    },
+    {
+        "id": "mobile",
+        "title": "Mobile Applications",
+        "icon": "fas fa-mobile-alt",
+        "description": "Native and cross-platform mobile apps for iOS and Android.",
+        "features": [
+            "iOS & Android Development",
+            "React Native Apps",
+            "Flutter Development",
+            "App Store Optimization"
+        ]
+    },
+    {
+        "id": "accounts",
+        "title": "Manage Business Accounts",
+        "icon": "fas fa-briefcase",
+        "description": "Professional management of business finances and bookkeeping.",
+        "features": [
+            "Expense Tracking",
+            "Payroll Services",
+            "Tax Preparation",
+            "Financial Reporting"
+        ]
+    },
+    {
+        "id": "social",
+        "title": "Manage Social Media",
+        "icon": "fas fa-share-alt",
+        "description": "Complete social media management to grow your online presence.",
+        "features": [
+            "Content Creation",
+            "Posting & Scheduling",
+            "Analytics & Reports",
+            "Engagement Management"
+        ]
+    },
+    {
+        "id": "design",
+        "title": "Graphic Designing",
+        "icon": "fas fa-paint-brush",
+        "description": "Creative designs for branding, marketing, and social media.",
+        "features": [
+            "Logo & Branding",
+            "Social Media Graphics",
+            "Marketing Materials",
+            "Custom Illustrations"
+        ]
+    },
+    {
+        "id": "campaigns",
+        "title": "Campaign Management",
+        "icon": "fas fa-bullhorn",
+        "description": "Strategic campaign planning and execution for maximum impact.",
+        "features": [
+            "Digital Ad Campaigns",
+            "Email Marketing",
+            "Influencer Collaboration",
+            "Performance Analytics"
+        ]
+    }
+]
+
+
+

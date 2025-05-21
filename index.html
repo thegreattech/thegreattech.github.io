@@ -33,6 +33,96 @@
 </head>
 
 <body>
+
+
+
+
+<style>
+#palestine-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  animation: fadeOut 1s ease-in-out 5s forwards;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#palestine-fullscreen img {
+  height: 50%;
+  margin-bottom: 20px;
+}
+
+#palestine-fullscreen .text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+</style>
+
+<div id="palestine-fullscreen">
+  <img src="palestine.gif" alt="Palestine Flag">
+  <div class="text">Free Palestine</div>
+</div>
+<script>
+  setTimeout(() => {
+    const loader = document.getElementById('palestine-loader');
+    if (loader) loader.remove();
+  }, 5000); // 5s display + 1s fade out
+</script>
+
+
+
+
+
+<!-- <style>
+  #palestine-flag-bar {
+  position: fixed;
+  top: 30%;
+  left: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  z-index: 99999;
+  padding: 10px 0;
+  animation: fadeOut 1s ease-in-out 5s forwards;
+}
+
+#palestine-flag-bar img {
+  height:100%;
+  
+
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+</style>
+   <div id="palestine-flag-bar">
+  <img src="palestine.gif" alt="Palestine Flag">
+</div> -->
+
+
+    
     <!-- Preloader -->
     <div class="preloader">
         <div class="loader">

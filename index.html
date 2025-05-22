@@ -37,59 +37,87 @@
 
 
 
-<style>
-#palestine-fullscreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background: #000;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 999999;
-  animation: fadeOut 1s ease-in-out 5s forwards;
-  font-family: sans-serif;
-  text-align: center;
-}
+    <style>
+        #palestine-fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background: #000;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 999999;
+            animation: fadeOut 1s ease-in-out 2s forwards;
+            font-family: sans-serif;
+            text-align: center;
+        }
 
-#palestine-fullscreen img {
-  height: 50%;
-  margin-bottom: 20px;
-}
+        #palestine-fullscreen img {
+            height: 50%;
+            margin-bottom: 20px;
+        }
 
-#palestine-fullscreen .text {
-  font-size: 2rem;
-  font-weight: bold;
-}
+        #palestine-fullscreen .text {
+            font-size: 2rem;
+            font-weight: bold;
+        }
 
-@keyframes fadeOut {
+        @keyframes fadeOut {
   to {
     opacity: 0;
     visibility: hidden;
   }
 }
-</style>
 
-<div id="palestine-fullscreen">
+
+
+        #palestine-topbanner {
+            /* position: fixed; */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #000;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 9999;
+           
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        #palestine-topbanner img {
+            height: 50px;
+        }
+
+        #palestine-topbanner p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+
+    <div id="palestine-fullscreen">
   <img src="palestine.gif" alt="Palestine Flag">
   <div class="text">Free Palestine</div>
 </div>
-<script>
-  setTimeout(() => {
-    const loader = document.getElementById('palestine-loader');
-    if (loader) loader.remove();
-  }, 5000); // 5s display + 1s fade out
-</script>
+
+    <script>
+        setTimeout(() => {
+            const loader = document.getElementById('palestine-loader');
+            if (loader) loader.remove();
+        }, 3000); // 5s display + 1s fade out
+    </script>
 
 
 
 
 
-<!-- <style>
+    <!-- <style>
   #palestine-flag-bar {
   position: fixed;
   top: 30%;
@@ -122,7 +150,7 @@
 </div> -->
 
 
-    
+
     <!-- Preloader -->
     <div class="preloader">
         <div class="loader">
@@ -146,9 +174,8 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">Services<i
-                                class="fas fa-chevron-down small ms-1 "></i></a>
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">Services<i class="fas fa-chevron-down small ms-1 "></i></a>
 
                         <div class="dropdown-menu ">
                             <a class="dropdown-item" href="services.html#web">Web Development</a>
@@ -169,6 +196,7 @@
 
     <!-- Hero Section -->
     <header class="hero">
+
         <div class="hero-overlay"></div>
         <div class="container" id="top">
             <div class="row align-items-center">
@@ -191,9 +219,12 @@
         </div>
     </header>
 
+   
     <!-- Services Preview Section -->
     <section id="services" class="section services-preview">
+
         <div class="container">
+
             <div class="section-header" data-aos="fade-up">
                 <h2>Our Core Services</h2>
                 <p>We offer comprehensive digital solutions tailored to your business needs</p>
@@ -245,7 +276,8 @@
                 <!-- Portfolio items would be loaded here -->
                 <div class="col-md-4 portfolio-item" data-aos="zoom-in">
                     <div class="portfolio-card">
-                        <img src="https://th.bing.com/th/id/OIP.xRkuy75CfClsQG7o6yPJpwHaEo?w=750&h=469&rs=1&pid=ImgDetMain" alt="Project 1" class="img-fluid">
+                        <img src="https://th.bing.com/th/id/OIP.xRkuy75CfClsQG7o6yPJpwHaEo?w=750&h=469&rs=1&pid=ImgDetMain"
+                            alt="Project 1" class="img-fluid">
                         <div class="portfolio-overlay">
                             <h3>E-Commerce Platform</h3>
                             <p>Fully customized online store with payment integration</p>
@@ -273,7 +305,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <div class="text-center mt-4" data-aos="fade-up">
                 <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
@@ -302,7 +334,7 @@
                 <p>We use the latest technologies to deliver top-notch solutions</p>
             </div>
             <div class="tech-grid">
-                 <div class="tech-item" data-aos="zoom-in" data-aos-delay="250">
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="250">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="AWS">
                     <span>PHP</span>
                 </div>
@@ -339,7 +371,7 @@
                         alt="Angular">
                     <span>Angular</span>
                 </div>
-               
+
             </div>
         </div>
     </section>
@@ -379,7 +411,7 @@
     <!-- Newsletter Section -->
     <section class="section newsletter">
 
-        <div class="container" >
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center" data-aos="zoom-in">
                     <h2 class="dark-mode:text-white">Stay Updated</h2>
@@ -390,9 +422,9 @@
                             <input type="email" id="email"
                                 class="form-control placeholder-gray-500 dark:placeholder-gray-300 dark-mode:text-white"
                                 placeholder="Your email address" required>
-                            <button  id="subsc" class="btn btn-primary" type="submit">Subscribe</button>
+                            <button id="subsc" class="btn btn-primary" type="submit">Subscribe</button>
                         </div>
-                        <div  class="form-text dark-mode:text-gray-400">We respect your privacy. Unsubscribe at any time.
+                        <div class="form-text dark-mode:text-gray-400">We respect your privacy. Unsubscribe at any time.
                         </div>
 
                         <!-- Hidden CAPTCHA until needed -->
@@ -418,7 +450,11 @@
         </div>
     </section>
 
-
+ <div id="palestine-topbanner">
+        <img src="https://github.com/maqsoodhussain/maqsoodhussain/blob/main/palestine.gif?raw=true"
+            alt="Palestine Flag">
+        <p>Free Palestine</p>
+    </div>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -522,17 +558,17 @@
         `;
                 });
                 $('#services-container').html(servicesHtml);
-                
+
             });
 
 
-        
 
-        // Load testimonials
-        $.getJSON('data/testimonials.json', function (data) {
-            let testimonialsHtml = '';
-            data.forEach(testimonial => {
-                testimonialsHtml += `
+
+            // Load testimonials
+            $.getJSON('data/testimonials.json', function (data) {
+                let testimonialsHtml = '';
+                data.forEach(testimonial => {
+                    testimonialsHtml += `
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="${testimonial.id * 100}">
                             <div class="testimonial-card">
                                 <div class="testimonial-content">
@@ -548,19 +584,19 @@
                             </div>
                         </div>
                     `;
+                    AOS.refresh();
+
+                });
+                $('#testimonials-container').html(testimonialsHtml);
                 AOS.refresh();
 
             });
-            $('#testimonials-container').html(testimonialsHtml);
-            AOS.refresh();
 
-        });
-
-        // Load blog preview
-        $.getJSON('data/blog-posts.json', function (data) {
-            let blogHtml = '';
-            data.slice(0, 3).forEach(post => {
-                blogHtml += `
+            // Load blog preview
+            $.getJSON('data/blog-posts.json', function (data) {
+                let blogHtml = '';
+                data.slice(0, 3).forEach(post => {
+                    blogHtml += `
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="${post.id * 100}">
                             <div class="blog-card">
                                 <div class="blog-image">
@@ -575,13 +611,13 @@
                             </div>
                         </div>
                     `;
-                AOS.refresh();
+                    AOS.refresh();
 
+                });
+                $('#blog-preview-container').html(blogHtml);
+                AOS.refresh();
             });
-            $('#blog-preview-container').html(blogHtml);
-            AOS.refresh();
-        });
-            
+
 
         });
     </script>

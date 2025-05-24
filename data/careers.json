@@ -1,5 +1,26 @@
 [
     {
+  "id": "PROJECT-CONTRIBUTOR",
+  "title": "Contributor",
+  "location": "Remote",
+  "type": "Project-Based",
+  "level": "Open (Junior to Senior)",
+  "description": "We’re seeking passionate contributors to collaborate on exciting projects across design, development, research, and more. This is a great opportunity to be part of a creative, flexible, and remote-friendly environment.",
+  "skills": ["Collaboration", "Communication", "Problem-Solving", "Adaptability"],
+  "responsibilities": [
+    "Contribute to project tasks based on your area of expertise",
+    "Collaborate with team members in a remote setting",
+    "Deliver high-quality work within agreed timelines",
+    "Participate in discussions, reviews, and brainstorming sessions"
+  ],
+  "requirements": [
+    "Strong motivation and willingness to contribute",
+    "Ability to work independently and meet deadlines",
+    "Good communication skills and a collaborative attitude",
+    "Experience in any relevant field (design, development, content, research, etc.)"
+  ]
+},
+    {
         "id": "fe-dev-2023",
         "title": "Frontend Developer",
         "location": "Remote",

@@ -6,9 +6,9 @@
         "category": "web",
         "categoryName": "Web Development",
         "date": "March 2023",
-        "thumbnail": "assets/images/photo.png",
+        "thumbnail": "https://www.applausekashmir.in/assets/images/logo.svg",
         "image": "https://camo.githubusercontent.com/5039566f80e44d154a7080d4a54d8c354917f06602d899c74f115ace7b993e89/68747470733a2f2f6170706c617573656b6173686d69722e696e2f4150504c415553455f4b4153484d4952202831292e706e67",
-        "url": "https://www.applausekashmir.in",
+        "url": "https://www.applausekashmir.in/index_m.html",
         "shortDescription": "A fully customized travel website with booking integration and destination management.",
         "description": "<p>We developed a complete travel booking solution for Applause Kashmir, a premium travel service provider. The platform features:</p><ul><li>Custom tour packages with dynamic pricing</li><li>Online booking system with secure payment integration</li><li>Destination and itinerary management tools</li><li>User-friendly inquiry and contact system</li><li>Responsive design optimized for all devices</li></ul>",
         "technologies": [
@@ -21,6 +21,46 @@
     },
     {
         "id": 2,
+        "title": "GestHouse Webiste",
+        "client": "Pursukoon Villa",
+        "category": "web",
+        "categoryName": "Web Development",
+        "date": "January 2022",
+        "thumbnail": "https://pursukoonvilla.in/assets/images/material/labe2.jpg",
+        "image": "https://pursukoonvilla.in/assets/images/material/room1.jpg",
+        "url": "https://pursukoonvilla.in",
+        "shortDescription": "A tailored travel website for Applause Kashmir with booking features and curated tour packages.",
+        "description": "<p>The Applause Kashmir website offers travelers a seamless way to explore and book experiences across Kashmir. Key features include:</p><ul><li>Detailed tour packages with pricing and itinerary</li><li>Integrated online booking and secure payments</li><li>Photo galleries showcasing destinations</li><li>Contact and inquiry forms for personalized assistance</li><li>Fully responsive design for mobile and desktop</li></ul>",
+        "technologies": [
+            "Html",
+            "js",
+            "ajaz",
+            "bootrap",
+            "etc"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Travel Website",
+        "client": "Stressout Tours",
+        "category": "web",
+        "categoryName": "Web Development ",
+        "date": "January 2023",
+        "thumbnail": "https://maqsoodhussain.github.io/stressouttours/assets/images/dallake.jpg",
+        "image": "https://camo.githubusercontent.com/7f12b2ad03596bfaa4fa860fdd149dd01fcc5fa98ed8544c5ef677896adcc311/68747470733a2f2f6d6171736f6f646875737361696e2e6769746875622e696f2f7374726573736f7574746f7572732f6173736574732f696d616765732f7374726573736f75742d626c75652e737667",
+        "url": "https://maqsoodhussain.github.io/stressouttours/index_m.html",
+        "shortDescription": "Elegant guest house website with online booking and gallery for Pursukoon Villa.",
+        "description": "<p>The Pursukoon Villa website offers a tranquil digital experience reflecting the serene charm of the guest house. Key features include:</p><ul><li>Room listings with descriptions, amenities, and pricing</li><li>Online booking system with calendar availability</li><li>High-resolution image gallery of the property</li><li>Contact form for inquiries and reservations</li><li>Responsive design for mobile and desktop users</li></ul>",
+        "technologies": [
+            "Html",
+            "js",
+            "ajaz",
+            "bootrap",
+            "etc"
+        ]
+    },
+    {
+        "id": 4,
         "title": "Mobile ecommerce App",
         "client": "Kashur kaar",
         "category": "mobile ecommerce",
@@ -39,55 +79,15 @@
         ]
     },
     {
-        "id": 3,
-        "title": "GestHouse Webiste",
-        "client": "Pursukoon Villa",
-        "category": "web",
-        "categoryName": "Web Development",
-        "date": "January 2022",
-        "thumbnail": "assets/images/photo.png",
-        "image": "https://camo.githubusercontent.com/a63881467cdfaf52b59caed2e0f128f2bdd737dc3e8b0d3ad7223f2753deca59/68747470733a2f2f7777772e7468656772656174746563682e746563682f696d672f636c69656e74732f70757273756b6f6f6e76696c6c612e706e67",
-        "url": "https://pursukoonvilla.in",
-        "shortDescription": "A tailored travel website for Applause Kashmir with booking features and curated tour packages.",
-        "description": "<p>The Applause Kashmir website offers travelers a seamless way to explore and book experiences across Kashmir. Key features include:</p><ul><li>Detailed tour packages with pricing and itinerary</li><li>Integrated online booking and secure payments</li><li>Photo galleries showcasing destinations</li><li>Contact and inquiry forms for personalized assistance</li><li>Fully responsive design for mobile and desktop</li></ul>",
-        "technologies": [
-            "Html",
-            "js",
-            "ajaz",
-            "bootrap",
-            "etc"
-        ]
-    },
-    {
-        "id": 4,
-        "title": "Travel Website",
-        "client": "Stressout Tours",
-        "category": "web",
-        "categoryName": "Web Development ",
-        "date": "January 2023",
-        "thumbnail": "assets/images/photo.png",
-        "image": "https://camo.githubusercontent.com/c68ce8d97f1c2ac2415a2dff54ed79fc3cd45656698ea80543c3325c29941ee9/68747470733a2f2f7777772e7468656772656174746563682e746563682f696d672f636c69656e74732f7374726573734f75742e6a7067",
-        "url": "https://pursukoonvilla.in",
-        "shortDescription": "Elegant guest house website with online booking and gallery for Pursukoon Villa.",
-        "description": "<p>The Pursukoon Villa website offers a tranquil digital experience reflecting the serene charm of the guest house. Key features include:</p><ul><li>Room listings with descriptions, amenities, and pricing</li><li>Online booking system with calendar availability</li><li>High-resolution image gallery of the property</li><li>Contact form for inquiries and reservations</li><li>Responsive design for mobile and desktop users</li></ul>",
-        "technologies": [
-            "Html",
-            "js",
-            "ajaz",
-            "bootrap",
-            "etc"
-        ]
-    },
-    {
         "id": 5,
         "title": "Institute Website",
         "client": "Woman and Child walfare Society",
         "category": "web",
         "categoryName": "Web Development",
         "date": "January 2022",
-        "thumbnail": "assets/images/photo.png",
-        "image": "https://camo.githubusercontent.com/3e1e9ca25942673e016086ebedfe1d3256b6e5104ca93145529925a34d6085d0/68747470733a2f2f7777772e7468656772656174746563682e746563682f696d672f636c69656e74732f776377736f63696574792e706e67",
-        "url": "https://wcwsociety.org",
+        "thumbnail": "https://maqsoodhussain.github.io/wcwsociety/img/cat-3.jpg",
+        "image": "https://camo.githubusercontent.com/cae20e7c454945e10604f4c7d0a207bd163cb627dd625ebbc5678e4551af6dd4/68747470733a2f2f7468656772656174746563682e6769746875622e696f2f6173736574732f696d616765732f636c69656e74732f776377736f63696574792e706e67",
+        "url": "https://maqsoodhussain.github.io/wcwsociety/index_m.html",
         "shortDescription": "Informative and engaging NGO website for WCW Society with donation and volunteer features.",
         "description": "<p>The WCW Society website was designed to support the organization's mission of social welfare and community development. Key features include:</p><ul><li>Overview of ongoing projects and initiatives</li><li>Online donation system with secure payment integration</li><li>Volunteer registration and contact forms</li><li>Blog section for news and updates</li><li>Responsive design compatible with all devices</li></ul>",
         "technologies": [

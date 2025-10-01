@@ -67,7 +67,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
     statusMessage.style.display = 'none';
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbypLEBxgvQT1c7EO3WSCFN-SxnvLsUAnV1HDA0NkTBAgsEmXiZCpMJ_LfvwZNTcr8LUng/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbwtYre7RuJSQX0vMMIIHn8B7WFgbE0Gl7fRjvyNvVPwx1BxS3r00jhZ9zB4YcwlVAL02g/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

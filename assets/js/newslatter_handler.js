@@ -62,7 +62,7 @@ document.getElementById('newsletter-form').addEventListener('submit', async (e) 
     messageDiv.style.display = 'none';
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbwBozwN0ZNFpVLmAIDpFKM_wFkZMyVpMCGv0opmbNoubndiZ79I30kI4L2v6Z7K3kmHQQ/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycby__f7NpwVnNKM5rHlujuX7GMXinGn8j7anLN4f-aG0H5b2ZzuDgZwWL1wjrcu8kMbzJw/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
